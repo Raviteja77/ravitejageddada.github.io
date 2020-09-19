@@ -1,0 +1,233 @@
+<html>
+	<head>
+	<title>Raviteja Resume</title>
+	<link rel="icon" type="image/x-icon" href="myphoto/ravi.jpeg">
+
+	<!-- include jquery, bootstrap and our stylesheet -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="bootstrap.css"
+	      />
+
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="styles.css"
+	      />
+	<link rel="stylesheet" 
+	      type="text/css" 
+	      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	      />
+	</head>
+	<body>
+
+	<div class="container">
+
+		<!--
+			 we have 1 row that contains 2 columns
+		     one for the thumbnails and one for the
+		     main reader view
+		-->  <br> <br>
+			
+			<div class = "photo"><img src = "myphoto/r.jpg" width = "30%" height = "auto"></div>
+			<center><h1><span style="color:#4A5394;"><u>RAVITEJA GEDDADA</u></span></h1></center>
+			<div class = "icon"><p><i class="fa fa-phone-square"></i>&nbsp;&nbsp;9989478379  <br>
+			<i class="fa fa-envelope-square" ></i>&nbsp;&nbsp;geddadaraviteja612@gmail.com <br>
+			<a href = "https://www.linkedin.com/in/raviteja77"><i class="fa fa-linkedin-square" ></i>&nbsp;&nbsp;https://www.linkedin.com/in/raviteja77</a> <br>
+			<a href = "https://github.com/Raviteja77"><i class="fa fa-github-square" ></i>&nbsp;&nbsp;https://github.com/Raviteja77</a></p></div>
+		<div class="row"></div>
+			<div class="col-md-3">
+				<!--
+					This is a list view that will
+					contain all the chapter thumbnails
+				-->
+				<ul class="list-group scrollable" id="chapterlist">
+					<!--
+						The id contains the chapter number, something
+						we will use in the JS code
+						The class list-group-item is for bootstrap
+						and chapter-thumbnail is for our code
+					-->
+            		<li id="chapter0"
+            		   class="list-group-item chapter-thumbnail "><div class = "hd">About me</div>
+<div class = "pro">Professional Student &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; 22 years</div>
+<p>Looking for great career pursuing chance, where I
+can effectively put my sincere abilities utilizing
+my skills to update myself along with the growth
+of the organization.
+	Highly Enthusiastic, committed professional student 
+and practical experience in one of the modern 
+emerging technologies i.e., AI. Possess excellent 
+communication skills and have an eye for detail.</p>
+            		</li>
+            		<li id="chapter1" class="list-group-item chapter-thumbnail"><div class = "hd">Internship                         <a href = "interncer.html">Certificates</a></div>
+<p>During my summer Internship on Aritificial 
+Intelligence which is authorized by the SmartBridge 
+collobaration with IBM Watson helped alot to gain 
+knowledge on AI and I learned deep learning 
+techniques to develop a project.
+I designed a project to recognize the Natural
+and Artificial things which can be helpful in
+Self driving cars and developed using the 
+"Convolutional Neural Network (CNN)".</p>
+		<a href="intern/SUMMERPROJECTREPORT.pdf">Click here for Project details</a>
+            		</li>
+            		<li id="chapter2" class="list-group-item chapter-thumbnail  "><div class = "hd">Academic Qualifications      <a href = "educer.html">Certificates</a></div>
+<p id = "c1"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;<b>B.Tech</b>
+Year of completion : 2021
+CMR Institute of Technology, Medchal, Hyderabad.
+Aggregate : 8.74GPA (upto 5<sup>th</sup> Semester)
+
+<i class="fa fa-university"></i>&nbsp;&nbsp;<b>Intermediate</b>
+Year of completion : 2017
+Narayana Junior College, Madhapur, Hyderabad.
+Percentage : 97.3%
+
+<i class="fa fa-university"></i>&nbsp;&nbsp;<b>SSC</b>
+Year of completion : 2015
+Sarada High School, Kondapur, Hyderabad.
+Percentage : 8.8GPA
+</p>
+            		</li>
+            		<li id="chapter3" class="list-group-item chapter-thumbnail"><div class = "hd">Assets</div>
+<p><b>Personal Skills</b>
+Active Listening
+Decision Making
+Adaptability
+Emotional Intelligence
+Organization
+
+<b>Technical Skills</b>
+Problem solving and Logical Thinking
+Programming Languages -> Java, Python
+Website design
+Electronic Presentation
+Team work and Collaboration</p>
+
+            		</li>
+            		<li id="chapter4" class="list-group-item chapter-thumbnail"><div class = "hd">Activities/Workshops</div>
+<p><a href = "activities/hackerrank.JPG"><i class="fa fa-check-square"></i>  Hackerrank Certificate</a>
+<a href = "activities/tech.JPG"><i class="fa fa-check-square"></i>  Techgig Certificate</a>
+<a href = "activities/infytq.JPG"><i class="fa fa-check-square"></i>  InfytQ Campus Connect Certificate</a>
+</p>
+<div class = "hd">Achievements</div>
+<p><a href = "achievements/Merit.jpg"><i class="fa fa-check-square"></i>  Merit Certificate</a>
+<a href = "achievements/Karate.jpg"><i class="fa fa-check-square"></i>  Karate Certificate</a>
+</p>
+            		</li>
+            		
+          		</ul>
+          	</div>
+
+          	<!--
+				This contains the main reader view
+				that will show the whole chapter.
+				It is currently empty because we will
+				fill in using JavaScript
+          	-->
+			<div class="col-md-9">
+				<!--
+					well is a bootstrap class for creating
+					a nice container box
+					The id, mainViewer is for our use
+				-->
+				<div class="well" id="mainViewer" >
+				</div>
+				<a href = "Raviteja_Resume_.pdf" id = "resume">click here to view/download my Resume</a>
+
+			</div>
+
+		</div>
+
+	<script>
+
+		// this is a variable to keep track
+		// of which chapter we are on
+		var counter = 0;
+
+		// when we click on a chapter thumbnail
+		// it displays that chapter
+		// this code is pretty similar to the
+		// image gallery, but I've added some code
+		// to update the counter
+		$(".chapter-thumbnail").click(function(){
+			// copy the html from the thumbnail (this)
+			// to the main viwer
+			$("#mainViewer").html(
+				$(this).html());
+
+			// get the id of this element so we can
+			// get hold of its number
+			var id = $(this).attr("id");
+
+			// set the counter to the number of the
+			// chapter we selected.
+			// We get this by taking the last charcter
+			// of the id and convert it to a number
+			// id.slice gets a subsection of the string
+			// passing in -1 means we get just the
+			// last character
+			// parseInt converts it to a number (integer)
+			counter = parseInt(id.slice(-1));
+		});
+
+		// virtually click the first chapter to select it
+		$("#chapter"+counter).click();
+
+		// when we click on the main viewer we want to
+		// move forward or backward in the
+		// chapter
+		$("#mainViewer").click(function (event){
+
+			// move forward if we click to the right
+			// or backward if we click to the left
+
+			// event.offsetX is the horizontal
+			// position of the mouse inside the
+			// element we have clicked on,
+			// it will be between 0
+			// and the width of the element
+
+			// $(this).width()*0.3 is 30% of
+			// the with of the element
+
+			// if event.offsetX is less than
+			// 30% of the width, it means it is
+			// on the left hand side
+			
+
+			// If we've gone below 0 it means
+			// we were at the beginning, and
+			// should just stay at zero
+			if(counter < 0){
+				counter =  0;
+			}
+
+			// $(".chapter-thumbnail").length
+			// is the number of elements that
+			// match the selector .chapter-thumbnail
+			// i.e. the number of chapter thumbnails
+			// if counter is equal to or more than
+			// the number of thumbnails it means
+			// we've gone past the last chapter which
+			// is $(".chapter-thumbnail").length-1
+			// (because we start counting at 0)
+			if(counter >=
+				$(".chapter-thumbnail").length){
+				counter =
+			$(".chapter-thumbnail").length-1;
+			}
+
+			// we get the id of the chapter thumbnail
+			// we want by putting counter on the end
+			// of it.
+			// we can do a virtual click on the
+			// chapter thumbnail to select it
+			$("#chapter"+counter).click();
+		});
+
+	</script>
+
+	</body>
+</html>
