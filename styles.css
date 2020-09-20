@@ -94,8 +94,8 @@ b {
 }
 @media screen and (max-width:999px) {
   .slidershow1 {
-    width : 80%;
-    height: 90%;
+    width : 90%;
+    height: auto;
     overflow: hidden;
   }
 }
