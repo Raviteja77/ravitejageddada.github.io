@@ -76,12 +76,11 @@ b {
 .mySlides {display: none;}
 @media screen and (min-width:1000px) {
 #intern {
-  padding-left: 29%;
-  width: 40%;
+  width: 35%;
   height: auto;}
 
 #edu {
-  width: 60%;
+  width: 55%;
   height: auto;
 }
 }
