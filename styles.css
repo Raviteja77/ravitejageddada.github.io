@@ -41,7 +41,6 @@
 
 .img {
   border-radius: 10%;
-  width: 15%;
   float: right;
 }
 
@@ -76,7 +75,7 @@ b {
 
 .mySlides {display: none;}
 img {
-  padding-left: 15%;
+  padding-left: 30%;
 }
 .slideshow-container {
   max-width: 1000px;
