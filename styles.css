@@ -87,11 +87,11 @@ b {
 @media screen and (max-width:999px)
 {
   #intern {
-  width: 85%;
+  width: 100%;
   height: auto;}
 
 #edu {
-  width: 85%;
+  width: 100%;
   height: auto;
 }
 }
