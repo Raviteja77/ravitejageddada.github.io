@@ -74,7 +74,28 @@ b {
 }
 
 .mySlides {display: none;}
+@media screen and (min-width:1000px) {
+#intern {
+  padding-left: 29%;
+  width: 40%;
+  height: auto;}
 
+#edu {
+  width: 60%;
+  height: auto;
+}
+}
+@media screen and (max-width:999px)
+{
+  #intern {
+  width: 85%;
+  height: auto;}
+
+#edu {
+  width: 85%;
+  height: auto;
+}
+}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
