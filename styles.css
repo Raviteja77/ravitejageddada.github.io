@@ -85,11 +85,20 @@ b {
   margin-top: 10px;
 }
 
+@media screen and (min-width:1000px) {
 .slidershow1 {
     width : 50%;
     height: 102%;
     overflow: hidden;
   }
+}
+@media screen and (max-width:999px) {
+  .slidershow1 {
+    width : 80%;
+    height: 90%;
+    overflow: hidden;
+  }
+}
 
   .middle1 {
     position: absolute;
