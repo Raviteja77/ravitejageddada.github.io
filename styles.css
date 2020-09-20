@@ -75,7 +75,9 @@ b {
 }
 
 .mySlides {display: none;}
-
+img {
+  padding-left: 13%;
+}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
